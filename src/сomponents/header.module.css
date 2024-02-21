@@ -1,0 +1,59 @@
+.header {
+  background-color: #bfc2c6; /* Dark background color */
+  color: #2a2828; /* White text color */
+  padding: 15px; /* Adjust padding as needed */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoTitle {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImg {
+  width: 40px;
+  margin: 0 10px 0 0;
+}
+
+.title {
+  color: #2a2828;
+  border: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.itemIcon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listItem {
+  margin-right: 15px; /* Adjust margin as needed */
+}
+
+.link {
+  color: #2c2a2a; /* White color for the links */
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #cccccc; /* Lighter color on hover */
+}
