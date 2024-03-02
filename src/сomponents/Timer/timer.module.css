@@ -1,0 +1,12 @@
+.timerBody {
+  background-color: #C95844;
+  border-radius: 100px;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto 40px auto;
+}
+

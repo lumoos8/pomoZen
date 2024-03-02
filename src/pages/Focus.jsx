@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
+import Timer from "../сomponents/Timer/Timer.jsx";
 
 const Focus = () => {
   return (
     <div>
-      <h2>Focus Page</h2>
-      <p>This is the focus page content.</p>
+      <Timer />
     </div>
   );
 };

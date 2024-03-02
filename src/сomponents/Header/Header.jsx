@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./header.module.css";
 
-const Header = () => {
+const Header = ({logoSrc, title}) => {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logoTitle}>
         <img
           className={styles.logoImg}
-          src="/src/assets/logo.png"
-          alt="pomoZen"
+          src={logoSrc}
+          alt={title}
         />
         <div className={styles.title}>PomoZen</div>
       </Link>

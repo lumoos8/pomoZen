@@ -1,0 +1,26 @@
+.btn {
+  background-color: #faf8f4;
+  color: #5da271;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  border: 10px solid #5da271;
+  border-radius: 35px;
+  padding: 5px 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px 0 40px;
+}
+
+.btn:hover {
+  transition: 0.5s ease;
+  background-color: #528e63;
+  color: #faf8f4;
+  border: 10px solid #528e63;
+}
+
+.btn:active {
+  background-color: #437551;
+  transition: 0.3s ease;
+  color: #faf8f4;
+  border: 10px solid #437551;
+}

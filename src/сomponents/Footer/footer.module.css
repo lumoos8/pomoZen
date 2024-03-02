@@ -1,0 +1,14 @@
+.footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #faf8f4;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 18px;
+}

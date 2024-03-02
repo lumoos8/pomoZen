@@ -1,7 +1,7 @@
 .header {
-  background-color: #bfc2c6; /* Dark background color */
-  color: #2a2828; /* White text color */
-  padding: 15px; /* Adjust padding as needed */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #faf8f4;
+  padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -22,8 +22,17 @@
 }
 
 .title {
-  color: #2a2828;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
   border: none;
+}
+
+.title:hover {
+  color: #C95844;
+  border: none;
+  transition: 1.0s ease;
+  ;
 }
 
 .navbar {
@@ -46,14 +55,22 @@
 }
 
 .listItem {
-  margin-right: 15px; /* Adjust margin as needed */
+  margin-right: 15px;
+  font-size: 18px;
 }
 
 .link {
-  color: #2c2a2a; /* White color for the links */
+  color: #333;
   text-decoration: none;
 }
 
 .link:hover {
-  color: #cccccc; /* Lighter color on hover */
+  color: #C95844; 
+  transition: 0.5s ease;
+}
+
+
+.link:active {
+  color: #5DA271; 
+  transition: 0.5s ease;
 }
