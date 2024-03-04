@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 10px;
+}
+
+.input {
+  width: 100%;
+  height: 30px;
+  margin: 0 0 0 20px;
+  border-radius: 5px;
+  background-color: #faf8f4;
+  border: 1px solid #898989;
+  color: #898989;
+}
+
+.input:hover {
+  background-color: #faf8f4;
+  border: 1px solid #666;
+}
+
+.input:focus {
+  background-color: #faf8f4;
+  border: 2px solid #5da271;
+  outline: none;
+  color: #898989;
+}
+
+.input:disabled {
+  background-color: #bdbdbc;
+  border: 4px solid #848484;
+  color: #898989;
+}
+
+.inputError {
+  background-color: #ecd0d0;
+  border: 4px solid #a25d5d;
+  color: #a25d5d;
+}
+
+.svgButton {
+  border: none;
+  margin: 0 12px;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.svg {
+  stroke: #c95844;
+}
+.svg:hover {
+  stroke: #898989;
+}
+
+.svg:active {
+  stroke: #5da271;
+}

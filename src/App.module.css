@@ -1,7 +1,8 @@
 .container {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #faf8f4;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
+  overflow-y: auto;
 }

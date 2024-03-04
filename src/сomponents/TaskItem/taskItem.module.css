@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  max-width: 500px;
+  margin: 15px 30px;
+}
+
+.taskItem {
+  color: #333;
+  font-size: 16px;
+  border-bottom: 1px solid #898989;
+  height: 30px;
+  width: 100%;
+}
+
+.textStriked {
+  color: ##898989;
+  text-decoration: line-through;
+  font-size: 16px;
+  border-bottom: 1px solid #898989;
+  height: 30px;
+  width: 100%;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 20px;
+  font-size: 20px;
+}
+.Btn {
+  border: none;
+  margin: 0 12px;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.svg {
+  stroke: #c95844;
+}
+.svg:hover {
+  stroke: #898989;
+}
+
+.svg:active {
+  stroke: #5da271;
+}
+
+.focusSvg:hover {
+  filter: grayscale(100%) opacity(50%);
+}
+
+.focusSvg:active {
+  filter: grayscale(100%);
+}

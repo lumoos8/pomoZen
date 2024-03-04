@@ -1,0 +1,17 @@
+.divider {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+}
+
+.title {
+  margin: 20px 20px 0px;
+}
+
+.dividerLine {
+  height: 4px;
+  background-color: #898989;
+  margin: 20px 10px 20px 20px;
+}
