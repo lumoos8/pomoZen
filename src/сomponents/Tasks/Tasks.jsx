@@ -2,11 +2,19 @@ import TaskInput from "./components/TaskInput/TaskInput";
 import styles from "./tasks.module.css";
 import Title from "./components/Title/Title";
 import TaskList from "./components/TaskList/TaskList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
 const Tasks = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    localStorage.getItem("tasks")
+      ? JSON.parse(localStorage.getItem("tasks"))
+      : []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleAddTask = (value) => {
     const newTask = { id: nanoid(), name: value, counter: 0 };
