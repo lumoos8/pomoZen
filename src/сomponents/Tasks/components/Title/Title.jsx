@@ -3,7 +3,7 @@ import styles from "./title.module.css";
 
 const Title = ({ title }) => {
   return (
-    <div className={styles.divider}>
+    <div className={styles.container}>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.dividerLine}></div>
     </div>

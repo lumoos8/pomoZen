@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./timer.module.css";
-import Time from "../Time/Time";
-import Button from "../Button/Button";
-import TimerSwitch from "../TimerSwitch/TimerSwitch";
+import Time from "./components/Time/Time";
+import Button from "./components/Button/Button";
+import TimerSwitch from "./components/TimerSwitch/TimerSwitch";
 const Timer = () => {
   const [seconds, setSeconds] = useState(25 * 60);
   const [isRunning, setIsRunning] = useState(false);
