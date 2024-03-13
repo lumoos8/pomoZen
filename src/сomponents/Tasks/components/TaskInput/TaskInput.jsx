@@ -6,7 +6,7 @@ import { useState } from "react";
 //   console.log("Click");
 // };
 
-const TaskInput = ({ onClick }) => {
+const TaskInput = ({ onClick, text }) => {
   const [taskName, setTaskName] = useState("");
   return (
     <div className={styles.container}>

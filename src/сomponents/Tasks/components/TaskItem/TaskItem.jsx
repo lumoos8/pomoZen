@@ -3,29 +3,37 @@ import styles from "./taskItem.module.css";
 import DeleteIcon from "../../../../assets/delete.svg?react";
 import FocusIcon from "../../../../assets/tomato.svg?react";
 import DoneIcon from "../../../../assets/done.svg?react";
+import classNames from "classnames";
 
-const TaskItem = ({ task, onDeleteTask }) => {
-  const handleDoneTask = () => {
-    console.log("done");
-  };
-
-  const handleFocusTask = () => {
-    console.log("focus");
-  };
-
+const TaskItem = ({ task, onDeleteTask, onDoneTask, onFocusTask }) => {
+  console.log(task);
   return (
     <li className={styles.container}>
-      <button className={styles.Btn} onClick={handleDoneTask}>
+      <button className={styles.btn} onClick={onDoneTask}>
         <DoneIcon className={styles.svg} />
       </button>
-      <div className={styles.taskItem}>{task.name} </div>
+
+      <div
+        className={classNames(styles.taskItem, {
+          [styles.textStriked]: task.isDone,
+        })}
+      >
+        {task.name}{" "}
+      </div>
+
       <div className={styles.count}>
         <div>{task.counter}</div>
-        <button className={styles.Btn} onClick={handleFocusTask}>
-          <FocusIcon className={styles.focusSvg} />
+
+        <button className={styles.btn} onClick={onFocusTask}>
+          <FocusIcon
+            className={classNames(styles.focusSvg, {
+              [styles.focusedSvg]: task.isFocused,
+            })}
+          />
         </button>
       </div>
-      <button className={styles.Btn} onClick={onDeleteTask}>
+
+      <button className={styles.btn} onClick={onDeleteTask}>
         <DeleteIcon className={styles.svg} />
       </button>
     </li>

@@ -31,7 +31,7 @@
   margin: 0 0 0 20px;
   font-size: 20px;
 }
-.Btn {
+.btn {
   border: none;
   margin: 0 12px;
   background: none;
@@ -56,4 +56,8 @@
 
 .focusSvg:active {
   filter: grayscale(100%);
+}
+
+.focusedSvg {
+  filter: hue-rotate(90deg);
 }

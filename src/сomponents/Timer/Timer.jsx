@@ -3,7 +3,7 @@ import styles from "./timer.module.css";
 import Time from "./components/Time/Time";
 import Button from "./components/Button/Button";
 import TimerSwitch from "./components/TimerSwitch/TimerSwitch";
-const Timer = () => {
+const Timer = ({ tasks, setTasks }) => {
   const [seconds, setSeconds] = useState(25 * 60);
   const [isRunning, setIsRunning] = useState(false);
   const isFinished = seconds === 0;
@@ -18,9 +18,17 @@ const Timer = () => {
   }
 
   const handleFinishClick = () => {
-    console.log("finish");
     setSeconds(25 * 60);
-    //some code
+    const updatedTasks = tasks.map((task) => {
+      if (task.isFocused) {
+        return {
+          ...task,
+          counter: task.counter + 1,
+        };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
   };
 
   useEffect(() => {

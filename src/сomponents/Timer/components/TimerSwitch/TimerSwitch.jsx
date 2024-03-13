@@ -4,7 +4,7 @@ import styles from "./timerSwitch.module.css";
 const TimerSwitch = ({ onClick }) => {
   return (
     <div className={styles.pagination}>
-      <button className={styles.btn} onClick={() => onClick(25 * 60)}>
+      <button className={styles.btn} onClick={() => onClick(3)}>
         POMODORO
       </button>
       <button className={styles.btn} onClick={() => onClick(5 * 60)}>
