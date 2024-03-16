@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Timer from "../сomponents/Timer/Timer.jsx";
 import Tasks from "../сomponents/Tasks/Tasks.jsx";
-// import styles from "./focus.module.css";
+import styles from "./focus.module.css";
 
 const Focus = () => {
   const [tasks, setTasks] = useState(
@@ -10,7 +10,7 @@ const Focus = () => {
       : []
   );
   return (
-    <div>
+    <div className={styles.container}>
       <Timer tasks={tasks} setTasks={setTasks} />
       <Tasks tasks={tasks} setTasks={setTasks} />
     </div>
