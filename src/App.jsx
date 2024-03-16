@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className={styles.container}>
       <div>
-        <Header logoSrc="/src/assets/logo.png" title="pomoZen" />
+        <Header title="pomoZen" />
         <Outlet />
       </div>
       <Footer />

@@ -8,12 +8,12 @@ import Focus from "./pages/Focus";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/pomoZen/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Focus />,
       },
       {
