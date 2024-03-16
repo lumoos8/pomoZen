@@ -1,13 +1,28 @@
 import styles from "./taskInput.module.css";
 import AddIcon from "../../../../assets/add.svg?react";
 import { useState } from "react";
+import { nanoid } from "nanoid";
 
-// const handleAddListItem = () => {
-//   console.log("Click");
-// };
-
-const TaskInput = ({ onClick }) => {
+const TaskInput = ({ tasks, setTasks }) => {
   const [taskName, setTaskName] = useState("");
+
+  const handleAddTask = () => {
+    if (!taskName) {
+      return;
+    }
+
+    const newTask = {
+      id: nanoid(),
+      name: taskName,
+      counter: 0,
+      isDone: false,
+      isFocused: false,
+    };
+
+    setTasks([newTask, ...tasks]);
+    setTaskName("");
+  };
+
   return (
     <div className={styles.container}>
       <input
@@ -17,17 +32,7 @@ const TaskInput = ({ onClick }) => {
         type="text"
         placeholder="What are you focusing on?"
       />
-      <button
-        className={styles.svgButton}
-        onClick={() => {
-          if (!taskName) {
-            return;
-          }
-
-          onClick(taskName);
-          setTaskName("");
-        }}
-      >
+      <button className={styles.svgButton} onClick={handleAddTask}>
         <AddIcon className={styles.svg} />
       </button>
     </div>

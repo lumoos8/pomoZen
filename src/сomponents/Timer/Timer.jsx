@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./timer.module.css";
 import Time from "./components/Time/Time";
 import Button from "./components/Button/Button";
@@ -6,10 +6,9 @@ import TimerSwitch from "./components/TimerSwitch/TimerSwitch";
 const Timer = ({ tasks, setTasks }) => {
   const [seconds, setSeconds] = useState(25 * 1);
   const [isRunning, setIsRunning] = useState(false);
-  const isFinished = seconds === 0;
   const [activeTab, setActiveTab] = useState("pomodoro");
 
-  function handleTabClick(activeTab) {
+  const handleTabClick = (activeTab) => {
     if (activeTab === "pomodoro") {
       setSeconds(25 * 1);
     } else if (activeTab === "shortBreak") {
@@ -19,11 +18,11 @@ const Timer = ({ tasks, setTasks }) => {
     }
     setIsRunning(false);
     setActiveTab(activeTab);
-  }
+  };
 
-  function handleButtonToggle() {
+  const handleButtonToggle = () => {
     setIsRunning(!isRunning);
-  }
+  };
 
   const handleFinishClick = () => {
     if (activeTab === "pomodoro") {
@@ -64,6 +63,8 @@ const Timer = ({ tasks, setTasks }) => {
 
     return () => clearInterval(interval);
   }, [isRunning]);
+
+  const isFinished = seconds === 0;
 
   return (
     <div className={styles.timerBody}>

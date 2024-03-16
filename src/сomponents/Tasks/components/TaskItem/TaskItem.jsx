@@ -6,7 +6,6 @@ import DoneIcon from "../../../../assets/done.svg?react";
 import classNames from "classnames";
 
 const TaskItem = ({ task, onDeleteTask, onDoneTask, onFocusTask }) => {
-  console.log(task);
   return (
     <li className={styles.container}>
       <button className={styles.btn} onClick={onDoneTask}>

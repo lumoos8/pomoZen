@@ -1,4 +1,3 @@
-import { React } from "react";
 import styles from "./taskList.module.css";
 import TaskItem from "../TaskItem/TaskItem";
 
