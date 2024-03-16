@@ -6,7 +6,7 @@ import { useState } from "react";
 //   console.log("Click");
 // };
 
-const TaskInput = ({ onClick, text }) => {
+const TaskInput = ({ onClick }) => {
   const [taskName, setTaskName] = useState("");
   return (
     <div className={styles.container}>
@@ -20,6 +20,10 @@ const TaskInput = ({ onClick, text }) => {
       <button
         className={styles.svgButton}
         onClick={() => {
+          if (!taskName) {
+            return;
+          }
+
           onClick(taskName);
           setTaskName("");
         }}
