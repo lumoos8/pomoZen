@@ -10,32 +10,37 @@
   padding: 15px 10px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #D4A0A7;
+  background-color: #d4a0a7;
   color: #333;
   border: none;
   cursor: pointer;
 }
+.btnActive {
+  background-color: #528e63;
+  transition: 0.3s ease;
+  color: #faf8f4;
+}
 
 .btn:hover {
   transition: 0.3s ease;
-  background-color: #5DA271;
-  color: #FAF8F4;
+  background-color: #5da271;
+  color: #faf8f4;
 }
 
 .btn:active {
-  background-color: #528E63;
+  background-color: #528e63;
   transition: 0.3s ease;
-  color: #FAF8F4;
+  color: #faf8f4;
 }
 
 .btn:first-child {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  border-right: 6px solid #C95844;
+  border-right: 6px solid #c95844;
 }
 
 .btn:last-child {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  border-left: 6px solid #C95844;
+  border-left: 6px solid #c95844;
 }

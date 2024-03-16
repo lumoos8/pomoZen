@@ -7,10 +7,18 @@ const Timer = ({ tasks, setTasks }) => {
   const [seconds, setSeconds] = useState(25 * 60);
   const [isRunning, setIsRunning] = useState(false);
   const isFinished = seconds === 0;
+  const [activeTab, setActiveTab] = useState("pomodoro");
 
-  function handleTabClick(seconds) {
-    setSeconds(seconds);
+  function handleTabClick(activeTab) {
+    if (activeTab === "pomodoro") {
+      setSeconds(2 * 1);
+    } else if (activeTab === "shortBreak") {
+      setSeconds(1 * 1);
+    } else if (activeTab === "longBreak") {
+      setSeconds(3 * 1);
+    }
     setIsRunning(false);
+    setActiveTab(activeTab);
   }
 
   function handleButtonToggle() {
@@ -18,17 +26,24 @@ const Timer = ({ tasks, setTasks }) => {
   }
 
   const handleFinishClick = () => {
-    setSeconds(25 * 60);
-    const updatedTasks = tasks.map((task) => {
-      if (task.isFocused) {
-        return {
-          ...task,
-          counter: task.counter + 1,
-        };
-      }
-      return task;
-    });
-    setTasks(updatedTasks);
+    if (activeTab === "pomodoro") {
+      const updatedTasks = tasks.map((task) => {
+        if (task.isFocused) {
+          return {
+            ...task,
+            counter: task.counter + 1,
+          };
+        }
+        return task;
+      });
+      setTasks(updatedTasks);
+      setActiveTab("shortBreak");
+      setSeconds(1 * 1);
+    } else {
+      setActiveTab("pomodoro");
+      setSeconds(2 * 1);
+    }
+    setIsRunning(false);
   };
 
   useEffect(() => {
@@ -52,7 +67,7 @@ const Timer = ({ tasks, setTasks }) => {
 
   return (
     <div className={styles.timerBody}>
-      <TimerSwitch onClick={handleTabClick} />
+      <TimerSwitch onClick={handleTabClick} activeTab={activeTab} />
       <Time seconds={seconds} />
       {isFinished && <Button onClick={handleFinishClick} text="FINISH" />}
       {!isFinished && (
