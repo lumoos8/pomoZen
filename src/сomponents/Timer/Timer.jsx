@@ -4,17 +4,17 @@ import Time from "./components/Time/Time";
 import Button from "./components/Button/Button";
 import TimerSwitch from "./components/TimerSwitch/TimerSwitch";
 const Timer = ({ tasks, setTasks }) => {
-  const [seconds, setSeconds] = useState(25 * 1);
+  const [seconds, setSeconds] = useState(25 * 60);
   const [isRunning, setIsRunning] = useState(false);
   const [activeTab, setActiveTab] = useState("pomodoro");
 
   const handleTabClick = (activeTab) => {
     if (activeTab === "pomodoro") {
-      setSeconds(25 * 1);
+      setSeconds(25 * 60);
     } else if (activeTab === "shortBreak") {
-      setSeconds(5 * 1);
+      setSeconds(5 * 60);
     } else if (activeTab === "longBreak") {
-      setSeconds(30 * 1);
+      setSeconds(30 * 60);
     }
     setIsRunning(false);
     setActiveTab(activeTab);
@@ -37,10 +37,10 @@ const Timer = ({ tasks, setTasks }) => {
       });
       setTasks(updatedTasks);
       setActiveTab("shortBreak");
-      setSeconds(5 * 1);
+      setSeconds(5 * 60);
     } else {
       setActiveTab("pomodoro");
-      setSeconds(25 * 1);
+      setSeconds(25 * 60);
     }
     setIsRunning(false);
   };
